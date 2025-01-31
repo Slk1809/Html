@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaggio a Firenze?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('https://previews.123rf.com/images/givaga/givaga2003/givaga200300028/141774154-cathedral-of-saint-mary-and-flowers-in-florence-italy.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 50px;
+            color: white;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        h2 {
+            color: #f1c40f;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no {
+            background-color: #FF4C4C;
+            color: white;
+        }
+        details {
+            margin-top: 20px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        summary {
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #f1c40f;
+        }
+        details p {
+            margin: 10px 0 0 0;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Ciao Paula, vuoi venire con me a Firenze l'8 febbraio? 🚆</h2>
+        <div class="buttons">
+            <button class="yes" onclick="respond(true)">Sì</button>
+            <button class="no" onclick="respond(false)">No</button>
+        </div>
+        <p id="response" style="margin-top: 20px; font-size: 18px;"></p>
+
+        <!-- Reasons to Accept -->
+        <details>
+            <summary>Kliko ketu per asyet pse duhet te pranosh:</summary>
+            <p>1. Ka goxha malore, mund tme vrasesh kollaj dhe tme heqesh qafe 🏔️</p>
+            <p>2. Do jesh me mua </p>
+            <p>3. Do te heq stresin e ketyre diteve </p>
+        </details>
+
+        <!-- Reasons to Decline -->
+        <details>
+            <summary>Kliko ketu per arsyet pse sduhet te pranosh:</summary>
+            <p>Pse e shtype kte butonin :)))</p>
+        </details>
+    </div>
+
+    <script>
+        function respond(isYes) {
+            let response = document.getElementById("response");
+            if (isYes) {
+                response.innerHTML = "Ok, zgjedhja e duhur, mos harro buzekuqin ;) ";
+            } else {
+                response.innerHTML = "Provo perseri 🖕";
+            }
+        }
+    </script>
+</body>
+</html>
